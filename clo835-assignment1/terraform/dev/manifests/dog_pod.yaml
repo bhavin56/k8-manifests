@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: dogs
+  labels:
+    app: dogs
+    owner: bhavin
+spec:
+  containers:
+  - name: dog
+    image: 462033369097.dkr.ecr.us-east-1.amazonaws.com/dogs-repo:v1.0
+    ports:
+    - containerPort: 80

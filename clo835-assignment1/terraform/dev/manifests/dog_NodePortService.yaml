@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: dogservice
+  labels:
+    app: dogs
+    owner: bhavin
+spec:
+  type: NodePort
+  ports:
+  - port: 80 #optional
+    targetPort: 80
+    nodePort: 30001
+  selector:
+    app: dogs
